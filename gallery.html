@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotoğraf Galerisi | Rota Seyahat Blogu</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="gallery.js"></script>
+    <script src="darkmode.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" id="logo">Rota</a>
+            
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <ul class="navbar">
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="tum-yazilar.html">Tüm Yazılar</a></li>
+                <li><a href="gallery.html">Galeri</a></li>
+                <li><a href="hakkimda.html">Hakkımda</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Fotoğraf Galerisi</h1>
+            <p>Seyahatlerimden en güzel kareler ve unutulmaz anılar</p>
+            <div class="gallery-stats">
+                <div class="stat">
+                    <span class="stat-number">120+</span>
+                    <span class="stat-label">Fotoğraf</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">15</span>
+                    <span class="stat-label">Şehir</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Kategori</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Galeri Filtreleri -->
+        <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">Tümü</button>
+            <button class="filter-btn" data-filter="nature">Doğa</button>
+            <button class="filter-btn" data-filter="city">Şehir</button>
+            <button class="filter-btn" data-filter="historical">Tarihi</button>
+            <button class="filter-btn" data-filter="food">Yemek</button>
+            <button class="filter-btn" data-filter="culture">Kültür</button>
+            <button class="filter-btn" data-filter="sunset">Gün Batımı</button>
+        </div>
+
+        <!-- Arama ve Sıralama -->
+        <div class="gallery-controls">
+            <div class="search-box">
+                <input type="text" placeholder="Fotoğraf ara...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="sort-options">
+                <select>
+                    <option value="newest">En Yeni</option>
+                    <option value="oldest">En Eski</option>
+                    <option value="name">Ada Göre</option>
+                    <option value="location">Konuma Göre</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Galeri Grid -->
+        <div class="gallery-grid">
+            <!-- 1. Sıra - Doğa Fotoğrafları -->
+            <div class="gallery-item nature large-item">
+                <img src="https://www.kapadokyabalonturlari.com.tr/assets/images/gallery/product/kapadokya-balon-turu_17.jpg" alt="Kapadokya Balonları">
+                <div class="gallery-overlay">
+                    <div class="photo-info">
+                        <h3>Kapadokya Balonları</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Nevşehir, Türkiye</p>
+                        <p><i class="far fa-calendar"></i> Ekim 2025</p>
+                        <div class="photo-tags">
+                            <span class="tag">Doğa</span>
+                            <span class="tag">Gün Doğumu</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-search-plus zoom-icon"></i>
+                </div>
+            </div>
+            
+            <div class="gallery-item city">
+                <img src="https://www.duvargiydir.com/media/catalog/product/h/n/hnat0157-doga-manzarali-duvar-kagidi-ev-dekorasyon-istanbul-silueti.jpg" alt="İstanbul Silueti">
+                <div class="gallery-overlay">
+                    <div class="photo-info">
+                        <h3>İstanbul Silueti</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</p>
+                        <p><i class="far fa-calendar"></i> Eylül 2025</p>
+                        <div class="photo-tags">
+                            <span class="tag">Şehir</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-search-plus zoom-icon"></i>
+                </div>
+            </div>
+
+            <div class="gallery-item historical">
+                <img src="https://library.coraltatil.com/img/blog-gorseller/efes/3.jpg" alt="Efes Antik Kenti">
+                <div class="gallery-overlay">
+                    <div class="photo-info">
+                        <h3>Efes Antik Kenti</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> İzmir, Türkiye</p>
+                        <p><i class="far fa-calendar"></i> Ağustos 2025</p>
+                        <div class="photo-tags">
+                            <span class="tag">Tarihi</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-search-plus zoom-icon"></i>
+                </div>
+            </div>
+
+            <!-- 2. Sıra -->
+            <div class="gallery-item food">
+                <img src="https://thechocoworld.com/web/news/image1661.JPG" alt="Geleneksel Türk Kahvaltısı">
+                <div class="gallery-overlay">
+                    <div class="photo-info">
+                        <h3>Geleneksel Türk Kahvaltısı</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Gaziantep, Türkiye</p>
+                        <p><i class="far fa-calendar"></i> Temmuz 2025</p>
+                        <div class="photo-tags">
+                            <span class="tag">Yemek</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-search-plus zoom-icon"></i>
+                </div>
+            </div>
+
+            <div class="gallery-item nature wide-item">
+                <img src="https://cdn2.enuygun.com/media/lib/1200x675/uploads/image/pamukkale-travertenleri-63232.webp" alt="Pamukkale Travertenleri">
+                <div class="gallery-overlay">
+                    <div class="photo-info">
+                        <h3>Pamukkale Travertenleri</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Denizli, Türkiye</p>
+                        <p><i class="far fa-calendar"></i> Haziran 2025</p>
+                        <div class="photo-tags">
+                            <span class="tag">Doğa</span>
+                            <span class="tag">UNESCO</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-search-plus zoom-icon"></i>
+                </div>
+            </div>
+
+            <!-- 3. Sıra -->
+            <div class="gallery-item sunset">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiQ-Aija-iabZyU2ReHCDzizsAJP0HYN3Xgg&s" alt="Antalya Gün Batımı">
+                <div class="gallery-overlay">
+                    <div class="photo-info">
+                        <h3>Antalya Gün Batımı</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Antalya, Türkiye</p>
+                        <p><i class="far fa-calendar"></i> Mayıs 2025</p>
+                        <div class="photo-tags">
+                            <span class="tag">Gün Batımı</span>
+                            <span class="tag">Deniz</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-search-plus zoom-icon"></i>
+                </div>
+            </div>
+
+            <div class="gallery-item culture">
+                <img src="https://dansakademi.com.tr/uploads/2021/12/zeybek-oyunu.jpg" alt="Halk Oyunu Gösterisi">
+                <div class="gallery-overlay">
+                    <div class="photo-info">
+                        <h3>Halk Oyunu Gösterisi</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Aydın, Türkiye</p>
+                        <p><i class="far fa-calendar"></i> Nisan 2025</p>
+                        <div class="photo-tags">
+                            <span class="tag">Kültür</span>
+                            <span class="tag">Gelenek</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-search-plus zoom-icon"></i>
+                </div>
+            </div>
+
+            <div class="gallery-item city">
+                <img src="https://cdn.renticar.com/cms/kozahan_1500x1000px_blog_goersel_e40a07181b.jpg" alt="Bursa Koza Hanı">
+                <div class="gallery-overlay">
+                    <div class="photo-info">
+                        <h3>Bursa Koza Hanı</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Bursa, Türkiye</p>
+                        <p><i class="far fa-calendar"></i> Mart 2025</p>
+                        <div class="photo-tags">
+                            <span class="tag">Şehir</span>
+                            <span class="tag">Alışveriş</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-search-plus zoom-icon"></i>
+                </div>
+            </div>
+
+            <!-- 4. Sıra -->
+            <div class="gallery-item nature tall-item">
+                <img src="https://yerler.com.tr/wp-content/uploads/2021/06/yedigoller-milli-parki.jpeg" alt="Yedigöller Milli Parkı">
+                <div class="gallery-overlay">
+                    <div class="photo-info">
+                        <h3>Yedigöller Milli Parkı</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Bolu, Türkiye</p>
+                        <p><i class="far fa-calendar"></i> Ekim 2024s</p>
+                        <div class="photo-tags">
+                            <span class="tag">Doğa</span>
+                            <span class="tag">Sonbahar</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-search-plus zoom-icon"></i>
+                </div>
+            </div>
+
+            <div class="gallery-item historical">
+                <img src="https://cdn.akkahotels.com/Uploads/Blog/aspendos_antik_tiyatrosu_4.jpg" alt="Aspendos Antik Tiyatrosu">
+                <div class="gallery-overlay">
+                    <div class="photo-info">
+                        <h3>Aspendos Antik Tiyatrosu</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Antalya, Türkiye</p>
+                        <p><i class="far fa-calendar"></i> Eylül 2024</p>
+                        <div class="photo-tags">
+                            <span class="tag">Tarihi</span>
+                            <span class="tag">Mimari</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-search-plus zoom-icon"></i>
+                </div>
+            </div>
+
+            <div class="gallery-item food">
+                <img src="https://www.gazisehirbaklava.com/resimler/baslik/1-jpg1691045472.81916.jpg" alt="Gaziantep Baklavası">
+                <div class="gallery-overlay">
+                    <div class="photo-info">
+                        <h3>Gaziantep Baklavası</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Gaziantep, Türkiye</p>
+                        <p><i class="far fa-calendar"></i> Ağustos 2024</p>
+                        <div class="photo-tags">
+                            <span class="tag">Yemek</span>
+                            <span class="tag">Tatlı</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-search-plus zoom-icon"></i>
+                </div>
+            </div>
+        </div>
+
+      
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Rota Seyahat Blogu</h3>
+                    <p>Dünyayı keşfetmek ve deneyimlerimi paylaşmak için yazıyorum.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hızlı Linkler</h4>
+                    <ul>
+                        <li><a href="index.html">Anasayfa</a></li>
+                        <li><a href="tum-yazilar.html">Tüm Yazılar</a></li>
+                        <li><a href="hakkimda.html">Hakkımda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Sosyal Medya</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rota Seyahat Blogu. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
